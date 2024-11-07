@@ -86,8 +86,8 @@ public class GameHandler : MonoBehaviour
 
     IEnumerator DeathPause()
     {
-        player.GetComponent<PlayerMove>().isAlive = false;
-        player.GetComponent<PlayerJump>().isAlive = false;
+        //player.GetComponent<PlayerMove>().isAlive = false;
+        //player.GetComponent<PlayerJump>().isAlive = false;
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("EndLose");
     }
@@ -101,6 +101,7 @@ public class GameHandler : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        GameHandler_PauseMenu.GameisPaused = false;
         SceneManager.LoadScene("MainMenu");
         // Reset all static variables here, for new games:
         playerHealth = StartPlayerHealth;
@@ -110,6 +111,7 @@ public class GameHandler : MonoBehaviour
     public void ReplayLastLevel()
     {
         Time.timeScale = 1f;
+        GameHandler_PauseMenu.GameisPaused = false;
         SceneManager.LoadScene(lastLevelDied);
         // Reset all static variables here, for new games:
         playerHealth = StartPlayerHealth;
