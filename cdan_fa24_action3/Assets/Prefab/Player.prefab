@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8620378093899634207}
   - component: {fileID: 6658090911741445650}
   - component: {fileID: 843044007100976295}
+  - component: {fileID: 7344983059153824746}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33,8 +34,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7808681812028555278}
+  - {fileID: 7675178887303492897}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5429609697678697435
 BoxCollider2D:
@@ -135,8 +137,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25e0c4403240474f9b1abcd3d657244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameHandler: {fileID: 0}
   pSpawn: {fileID: 0}
+--- !u!114 &7344983059153824746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235255882453887391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacffb9ef8d0b2d44bf09c31efc1d278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webPrefab: {fileID: 1215757349548923308, guid: a8b141ddcd02385428b9ec2717518f80, type: 3}
+  webShooter: {fileID: 5680410014738701388}
+  webShooterBase: {fileID: 7675178887303492897}
 --- !u!1 &1960432929907296764
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,3 +237,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4006772432337938146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5680410014738701388}
+  m_Layer: 0
+  m_Name: webShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5680410014738701388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4006772432337938146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.755, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7675178887303492897}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4476649737309357084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7675178887303492897}
+  m_Layer: 0
+  m_Name: webShooter_Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7675178887303492897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476649737309357084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5680410014738701388}
+  m_Father: {fileID: 2973179338472867846}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
