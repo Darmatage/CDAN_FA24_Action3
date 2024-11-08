@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8143872784569235272}
   - component: {fileID: 3276997666467251004}
+  - component: {fileID: 2738231964286350304}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3276997666467251004
 MonoBehaviour:
@@ -44,3 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67551adfcd4508419afd58af3436d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartPlayerHealth: 100
+  healthText: {fileID: 0}
+  tokensText: {fileID: 0}
+  isDefending: 0
+--- !u!114 &2738231964286350304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057157252943101711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd28dd2b40449618deb0e967bd6fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  mixer: {fileID: 0}
