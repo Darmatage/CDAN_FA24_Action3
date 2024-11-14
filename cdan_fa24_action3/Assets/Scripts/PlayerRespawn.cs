@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerRespawn : MonoBehaviour {
+/*public class PlayerRespawn : MonoBehaviour {
 
     GameHandler gameHandler;
     public Transform pSpawn;       // current player spawn point
@@ -38,4 +38,4 @@ public class PlayerRespawn : MonoBehaviour {
               yield return new WaitForSeconds(0.5f);
               checkRend.material.color = Color.white;
        }
-}
+} */

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerBottomRespawn : MonoBehaviour {
+/*public class PlayerBottomRespawn : MonoBehaviour {
 
        public GameHandler gameHandler;
        public Transform playerPos;
@@ -29,3 +29,4 @@ public class PlayerBottomRespawn : MonoBehaviour {
               }
        }
 }
+*/
