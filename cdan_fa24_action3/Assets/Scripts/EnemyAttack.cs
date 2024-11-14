@@ -33,7 +33,7 @@ public class EnemyBite : MonoBehaviour {
        }
 
        void Attack(){
-              anim.SetTrigger ("Attack");
+              //anim.SetTrigger ("Attack");
               Debug.Log("I am biting the player!");
               if (distanceToMouth < damageRange){
                      gameHandler.playerGetHit(damage);
