@@ -3,13 +3,12 @@ using System.Collections;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour {
-/*
     GameHandler gameHandler;
     public Transform pSpawn;       // current player spawn point
 
        void Start() {
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-            pSpawn = GameObject.FindWithTag("Respawn").GetComponent<Transform>();
+            pSpawn = GameObject.FindWithTag("RespawnStart").GetComponent<Transform>();
        }
 
        void Update() {
@@ -19,6 +18,10 @@ public class PlayerRespawn : MonoBehaviour {
                             Debug.Log("I am going back to the last spawn point");
                             Vector3 pSpn2 = new Vector3(pSpawn.position.x, pSpawn.position.y, transform.position.z);
                             gameObject.transform.position = pSpn2;
+
+							//temp content:  respawn with half health:
+							GameHandler.playerHealth = 50;
+							gameHandler.updateStatsDisplay();
                      }
               }
        }
@@ -38,6 +41,5 @@ public class PlayerRespawn : MonoBehaviour {
               yield return new WaitForSeconds(0.5f);
               checkRend.material.color = Color.white;
        }
-*/
 
 } 

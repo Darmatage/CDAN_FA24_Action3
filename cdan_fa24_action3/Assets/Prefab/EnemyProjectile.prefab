@@ -117,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 2706535009539130994}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5037831902076924871
 BoxCollider2D:
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0074091703, y: 0.002469778}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef3f507d7f18f445b551161a4be0562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 20
   speed: 10
   hitEffectAnim: {fileID: 3673417810307550746, guid: 9e9e9caf773ee7c41ad6a4b7bd2a8066, type: 3}
   SelfDestructTime: 2

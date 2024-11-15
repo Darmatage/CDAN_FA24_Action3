@@ -63,9 +63,10 @@ public class GameHandler : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            playerHealth = 0;
+			playerHealth = 0;
             updateStatsDisplay();
-            playerDies();
+			//temp remove death for respawn system:
+            //playerDies();
         }
     }
 

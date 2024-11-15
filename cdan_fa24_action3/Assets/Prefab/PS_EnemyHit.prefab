@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6352397108944043407
 ParticleSystem:
@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.6
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1046,20 +1046,20 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0.011600494
           value: 0
-          inSlope: 2.4322069
-          outSlope: 2.4322069
+          inSlope: 3.1579707
+          outSlope: 3.1579707
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.18229657
+          outWeight: 0.24805428
         - serializedVersion: 3
-          time: 0.43853664
-          value: 0.81250226
-          inSlope: 0.800425
-          outSlope: 0.800425
+          time: 0.43606016
+          value: 0.6125023
+          inSlope: 0.66089034
+          outSlope: 0.66089034
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.22537182
+          inWeight: 0.28519264
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2

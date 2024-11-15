@@ -418,7 +418,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 5.789131, y: 0, z: 5.789177, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -766,14 +766,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3601589758591205506}
     m_Modifications:
+    - target: {fileID: 2738231964286350304, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 1658144401868979941}
     - target: {fileID: 3276997666467251004, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
       propertyPath: healthText
       value: 
-      objectReference: {fileID: 944147459352984151}
+      objectReference: {fileID: 4992503961746161867}
     - target: {fileID: 3276997666467251004, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
       propertyPath: tokensText
       value: 
-      objectReference: {fileID: 852352401410698506}
+      objectReference: {fileID: 5269033012345710430}
     - target: {fileID: 5057157252943101711, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
       propertyPath: m_Name
       value: GameHandler
@@ -999,6 +1003,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a58d2d215db4a3d858edf9d340ba65, type: 3}
+--- !u!1 &1658144401868979941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2471661795959551107, guid: d2a58d2d215db4a3d858edf9d340ba65, type: 3}
+  m_PrefabInstance: {fileID: 3841555924399508070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6885046908693584544 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7693110707934744774, guid: d2a58d2d215db4a3d858edf9d340ba65, type: 3}
