@@ -5,23 +5,23 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
 
-    //public Animator animator;
-    public Rigidbody2D rb2D;
+    //private Animator anim;
+    private Rigidbody2D rb2D;
 
     void Start()
     {
-        //animator = gameObject.GetComponentInChildren<Animator>();
+        //anim = gameObject.GetComponentInChildren<Animator>();
         rb2D = transform.GetComponent<Rigidbody2D>();
     }
 
     public void playerHit()
     {
-        //animator.SetTrigger ("GetHurt");
+        //anim.SetTrigger ("GetHurt");
     }
 
     public void playerDead()
     {
         rb2D.isKinematic = true;
-        //animator.SetTrigger ("Dead");
+        //anim.SetTrigger ("Dead");
     }
 }

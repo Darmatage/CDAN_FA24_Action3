@@ -47,7 +47,7 @@ public class EnemyMoveShoot : MonoBehaviour {
               if ((player != null) && (DistToPlayer <= attackRange)) {
                      // approach player
                      if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
-                            transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
+                            //transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
                             if (isAttacking == false) {
                                    //anim.SetBool("Walk", true);
                             }
@@ -63,7 +63,7 @@ public class EnemyMoveShoot : MonoBehaviour {
 
                      // retreat from player
                      else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
-                            transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
+                            //transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
                             if (isAttacking == false) {
                                    //anim.SetBool("Walk", true);
                             }
