@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameHandler
   - Checkpoint
+  - PauseMenuSlider
+  - enemyShooter
   layers:
   - Default
   - TransparentFX
