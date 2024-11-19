@@ -37,12 +37,12 @@ public class WebBridge_Effects : MonoBehaviour{
 	}
 */
 
-	IEnumerator OffWeb(GameObject walker){
+	IEnumerator OffWeb(GameObject thePlayer){
 		yield return new WaitForSeconds(0.2f);
-		walker.GetComponent<Collider2D>().enabled=true;
+		thePlayer.GetComponent<Collider2D>().enabled=true;
 		Debug.Log("player collider back on");
 		yield return new WaitForSeconds(0.1f);
-		walker.GetComponent<Collider2D>().enabled=true;
+		thePlayer.GetComponent<Collider2D>().enabled=true;
 	}
 
 
