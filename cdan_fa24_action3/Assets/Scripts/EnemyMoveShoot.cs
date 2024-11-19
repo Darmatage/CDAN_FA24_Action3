@@ -24,6 +24,9 @@ public class EnemyMoveShoot : MonoBehaviour {
        public bool isAttacking = false;
        private float scaleX;
 
+	   public bool isWebbed = false;
+	   private Color startColor = new Color(2.5f,2.5f,2.5f,1f);  
+
        void Start () {
               Physics2D.queriesStartInColliders = false;
               scaleX = gameObject.transform.localScale.x;
@@ -44,7 +47,7 @@ public class EnemyMoveShoot : MonoBehaviour {
 
        void Update () {
               float DistToPlayer = Vector3.Distance(transform.position, player.position);
-              if ((player != null) && (DistToPlayer <= attackRange)) {
+              if ((player != null) && (DistToPlayer <= attackRange) && (!isWebbed)) {
                      // approach player
                      if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
                             //transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
@@ -101,6 +104,22 @@ public class EnemyMoveShoot : MonoBehaviour {
                      StartCoroutine("HitEnemy");
               }
        }
+
+	   public void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Web"){
+			isWebbed = true;
+			Debug.Log("I am webbed!");
+			gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+		}
+	   }
+
+	   public void OnTriggerExit2D(Collider2D other){
+		if (other.gameObject.tag == "Web"){
+			isWebbed = false;
+			Debug.Log("I am free from web");
+			gameObject.GetComponentInChildren<SpriteRenderer>().color = startColor;
+		}
+	   }
 
        IEnumerator HitEnemy(){
               // color values are R, G, B, and alpha, each divided by 100

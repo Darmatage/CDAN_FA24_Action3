@@ -9,6 +9,9 @@ TagManager:
   - PauseMenuSlider
   - enemyShooter
   - RespawnStart
+  - Door
+  - WebCharger
+  - Web
   layers:
   - Default
   - TransparentFX

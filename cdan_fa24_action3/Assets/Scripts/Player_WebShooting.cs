@@ -13,6 +13,7 @@ public class WebShooting : MonoBehaviour{
 	public GameObject webPrefab;
 	public Transform webShooter;
 	public Transform webShooterBase;
+	private RechargeTimer rechargeTimer; 
 
 //target:
 	public GameObject webTarget;
@@ -27,6 +28,7 @@ public class WebShooting : MonoBehaviour{
 		rb = GetComponent <Rigidbody2D>();
 		cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
 		webTarget.SetActive(false);
+		rechargeTimer = GameObject.FindWithTag("WebCharger").GetComponent<RechargeTimer>();
     }
 
     // Update is called once per frame
@@ -43,7 +45,10 @@ public class WebShooting : MonoBehaviour{
 
 		//add a player Input listener for SHOOTING:
 		if (Input.GetButtonUp("Fire1")){
-			WebShoot();
+			if (rechargeTimer.energyTimer >= rechargeTimer.energyUsedInWeb){
+				WebShoot();
+				rechargeTimer.UseWebEnergy(rechargeTimer.energyUsedInWeb);
+			}
 			//reset the webTarget: 
 			webTarget.transform.position = webShooter.position;
 			webTarget.SetActive(false);
