@@ -16,6 +16,7 @@ public class DestroyTimed : MonoBehaviour{
 		if (fadeAway){
 			StartCoroutine(FadeOut(objectArt));
 		}
+		GetComponent<Collider2D>().enabled=false;
 		yield return new WaitForSeconds(timeDestroy/4);
 		Destroy(gameObject);
     }
