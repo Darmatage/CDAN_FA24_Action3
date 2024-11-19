@@ -17,13 +17,16 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
        private int previousSpot;
        public bool faceRight = false;
 
+	   public bool isWebbed = false;
+
        void Start(){
               waitTime = startWaitTime;
               nextSpot = startSpot;
               //anim = gameObject.GetComponentInChildren<Animator>();
        }
 
-       void Update(){
+	void Update(){
+		if (!isWebbed){
               transform.position = Vector2.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
 
               if (Vector2.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f){
@@ -49,15 +52,28 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
               // NOTE1: If faceRight does not change, try reversing !faceRight, above
               // NOTE2: If NPC faces the wrong direction as it moves, set the sprite Scale X = -1.
        }
+	}
 
-       private void NPCTurn(){
-              // NOTE: Switch player facing label (avoids constant turning)
-              faceRight = !faceRight;
+	private void NPCTurn(){
+		// NOTE: Switch player facing label (avoids constant turning)
+		faceRight = !faceRight;
 
-              // NOTE: Multiply player's x local scale by -1.
-              Vector3 theScale = transform.localScale;
-              theScale.x *= -1;
-              transform.localScale = theScale;
-       }
+		// NOTE: Multiply player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Web"){
+			isWebbed = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other){
+		if (other.gameObject.tag == "Web"){
+			isWebbed = false;
+		}
+	}
 
 }

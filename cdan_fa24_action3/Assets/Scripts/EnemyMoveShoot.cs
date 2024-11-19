@@ -105,21 +105,23 @@ public class EnemyMoveShoot : MonoBehaviour {
               }
        }
 
-	   public void OnTriggerEnter2D(Collider2D other){
+
+
+	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Web"){
 			isWebbed = true;
 			Debug.Log("I am webbed!");
 			gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
 		}
-	   }
+	}
 
-	   public void OnTriggerExit2D(Collider2D other){
+	void OnTriggerExit2D(Collider2D other){
 		if (other.gameObject.tag == "Web"){
 			isWebbed = false;
 			Debug.Log("I am free from web");
 			gameObject.GetComponentInChildren<SpriteRenderer>().color = startColor;
 		}
-	   }
+	}
 
        IEnumerator HitEnemy(){
               // color values are R, G, B, and alpha, each divided by 100
