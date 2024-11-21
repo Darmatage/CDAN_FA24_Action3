@@ -12,6 +12,7 @@ TagManager:
   - Door
   - WebCharger
   - Web
+  - Bounding
   layers:
   - Default
   - TransparentFX

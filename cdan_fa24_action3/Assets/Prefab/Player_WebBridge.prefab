@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 557058699270927831}
   - component: {fileID: 7875530443309629640}
   - component: {fileID: 7803581307903918999}
+  - component: {fileID: 6756741692203167841}
   m_Layer: 0
   m_Name: Player_WebBridge
   m_TagString: Web
@@ -164,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.99, y: 1.1}
+  m_Size: {x: 1.1, y: 1.1}
   m_EdgeRadius: 0
 --- !u!114 &7875530443309629640
 MonoBehaviour:
@@ -194,6 +195,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onWeb: 0
+--- !u!114 &6756741692203167841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215757349548923308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1813a5e5442807243b226c4f22bfd99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2291259773474635781
 GameObject:
   m_ObjectHideFlags: 0

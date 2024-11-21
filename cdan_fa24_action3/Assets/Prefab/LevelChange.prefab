@@ -201,7 +201,7 @@ Transform:
   - {fileID: 8122264520459768319}
   - {fileID: 2873301910397727190}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4370989834357145217
 BoxCollider2D:
@@ -262,4 +262,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLevel: MainMenu
   msgPressE: {fileID: 2452470214165902502}
-  canPressE: 1
+  canPressE: 0
