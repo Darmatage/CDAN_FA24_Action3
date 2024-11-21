@@ -44,8 +44,8 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
               else if (nextSpot == (moveSpots.Length -1)) { moveForward = false; }
 
               //turning the enemy
-              if (previousSpot < 0){ previousSpot = moveSpots.Length -1; }
-              else if (previousSpot > moveSpots.Length -1){ previousSpot = 0; }
+              if (previousSpot > 0){ previousSpot = moveSpots.Length -1; }
+              else if (previousSpot < moveSpots.Length -1){ previousSpot = 0; }
 
               if ((previousSpot == 0) && (faceRight)){ NPCTurn(); }
               else if ((previousSpot == (moveSpots.Length -1)) && (!faceRight)) { NPCTurn(); }
