@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2973179338472867846}
   - component: {fileID: 6045613579521249642}
-  - component: {fileID: 7242177433974533450}
   - component: {fileID: 8620378093899634207}
   - component: {fileID: 6658090911741445650}
   - component: {fileID: 47670933184951775}
@@ -77,41 +76,6 @@ CircleCollider2D:
   m_Offset: {x: -0.02, y: 0.02}
   serializedVersion: 2
   m_Radius: 0.33
---- !u!58 &7242177433974533450
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235255882453887391}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.024001896, y: 0.024001896}
-  serializedVersion: 2
-  m_Radius: 0.25998086
 --- !u!50 &8620378093899634207
 Rigidbody2D:
   serializedVersion: 4
@@ -153,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2D: {fileID: 8620378093899634207}
   FaceRight: 1
-  startSpeed: 0.1
+  startSpeed: 5
   isAlive: 1
 --- !u!114 &47670933184951775
 MonoBehaviour:
@@ -226,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2954561247432332446
 Transform:
   m_ObjectHideFlags: 0
@@ -310,7 +274,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.97
+  m_PointLightOuterRadius: 2.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
