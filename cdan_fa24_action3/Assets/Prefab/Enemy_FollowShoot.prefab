@@ -124,7 +124,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2551137864634205361}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   EnemyLives: 30
   attackRange: 6
   isAttacking: 0
+  isWebbed: 0
 --- !u!1 &2708244559098156649
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,24 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WebDestroy : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class WebDestroy : MonoBehaviour{
 
-    // Update is called once per frame
-    void Update()
-    {
-    
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-        {
-        if (collision.gameObject.tag == "Bounding")
-        {
-            Destroy(gameObject);
+
+    public bool isWebbed = false;
+
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag == "Web"){
+            Debug.Log("No web allowd here!");
+            isWebbed = true;
+            Destroy(other.gameObject);
         }
     }
 }
