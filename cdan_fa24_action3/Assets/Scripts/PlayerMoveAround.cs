@@ -9,7 +9,7 @@ public class PlayerMoveAround : MonoBehaviour {
       public Rigidbody2D rb2D;
       public bool FaceRight = false; // determine which way player is facing. Leave public for other scripts to access.
       public static float runSpeed = 10f;
-      public float startSpeed = 10f;
+      public float startSpeed = 5f;
       public bool isAlive = true;
 
       void Start(){
