@@ -93,7 +93,7 @@ public class GameHandler : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Sam_work");
     }
 
     // Return to MainMenu

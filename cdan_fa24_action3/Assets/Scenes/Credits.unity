@@ -266,6 +266,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2738231964286350304, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 1760842936}
+    - target: {fileID: 3276997666467251004, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1760842938}
+    - target: {fileID: 3276997666467251004, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
+      propertyPath: tokensText
+      value: 
+      objectReference: {fileID: 1760842938}
     - target: {fileID: 5057157252943101711, guid: 05daa082b47a73541b6d4d1fb18c6dca, type: 3}
       propertyPath: m_Name
       value: GameHandler
