@@ -1,141 +1,138 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveShoot : MonoBehaviour {
+public class EnemyMoveShoot : MonoBehaviour
+{
+    public float speed = 2f;
+    public float stoppingDistance = 4f; // when enemy stops moving towards player
+    public float retreatDistance = 3f; // when enemy moves away from approaching player
+    private float timeBtwShots;
+    public float startTimeBtwShots = 2;
+    public GameObject projectile;
 
-      //public Animator anim;
-       public float speed = 2f;
-       public float stoppingDistance = 4f; // when enemy stops moving towards player
-       public float retreatDistance = 3f; // when enemy moves away from approaching player
-       private float timeBtwShots;
-       public float startTimeBtwShots = 2;
-       public GameObject projectile;
+    private Rigidbody2D rb;
+    private Transform player;
+    private Vector2 PlayerVect;
 
-       private Rigidbody2D rb;
-       private Transform player;
-       private Vector2 PlayerVect;
+    public int EnemyLives = 30;
+    private Renderer rend;
 
-       public int EnemyLives = 30;
-       private Renderer rend;
-       //private GameHandler gameHandler;
+    public float attackRange = 10;
+    public bool isAttacking = false;
+    private float scaleX;
 
-       public float attackRange = 10;
-       public bool isAttacking = false;
-       private float scaleX;
+    public bool isWebbed = false;
+    private Color startColor = new Color(2.5f, 2.5f, 2.5f, 1f);
 
-	   public bool isWebbed = false;
-	   private Color startColor = new Color(2.5f,2.5f,2.5f,1f);  
+    // Sprites for up, down, left, and right directions
+    public Sprite spriteUp;
+    public Sprite spriteDown;
+    public Sprite spriteLeft;
+    public Sprite spriteRight;
 
-       void Start () {
-              Physics2D.queriesStartInColliders = false;
-              scaleX = gameObject.transform.localScale.x;
+    private SpriteRenderer spriteRenderer;
 
-              rb = GetComponent<Rigidbody2D> ();
-              player = GameObject.FindGameObjectWithTag("Player").transform;
-              PlayerVect = player.transform.position;
+    void Start()
+    {
+        Physics2D.queriesStartInColliders = false;
+        scaleX = gameObject.transform.localScale.x;
 
-              timeBtwShots = startTimeBtwShots;
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        PlayerVect = player.transform.position;
 
-              rend = GetComponentInChildren<Renderer> ();
-              //anim = GetComponentInChildren<Animator> ();
+        timeBtwShots = startTimeBtwShots;
 
-              //if (GameObject.FindWithTag ("GameHandler") != null) {
-              // gameHander = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
-              //}
-       }
+        rend = GetComponentInChildren<Renderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-       void Update () {
-              float DistToPlayer = Vector3.Distance(transform.position, player.position);
-              if ((player != null) && (DistToPlayer <= attackRange) && (!isWebbed)) {
-                     // approach player
-                     if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
-                            //transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
-                            if (isAttacking == false) {
-                                   //anim.SetBool("Walk", true);
-                            }
-                            //Vector2 lookDir = PlayerVect - rb.position;
-                            //float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
-                            //rb.rotation = angle;
-                     }
-                     // stop moving
-                     else if (Vector2.Distance (transform.position, player.position) < stoppingDistance && Vector2.Distance (transform.position, player.position) > retreatDistance) {
-                            transform.position = this.transform.position;
-                            //anim.SetBool("Walk", false);
-                     }
+        // Set a default sprite
+        spriteRenderer.sprite = spriteDown; // Default to "down" sprite
+    }
 
-                     // retreat from player
-                     else if (Vector2.Distance (transform.position, player.position) < retreatDistance) {
-                            //transform.position = Vector2.MoveTowards (transform.position, player.position, -speed * Time.deltaTime);
-                            if (isAttacking == false) {
-                                   //anim.SetBool("Walk", true);
-                            }
-                     }
+    void Update()
+    {
+        float DistToPlayer = Vector3.Distance(transform.position, player.position);
+        if ((player != null) && (DistToPlayer <= attackRange) && (!isWebbed))
+        {
+            // Determine direction to player
+            Vector2 direction = (player.position - transform.position).normalized;
 
-                     //Flip enemy to face player direction. Wrong direction? Swap the * -1.
-                     if (player.position.x > gameObject.transform.position.x){
-                            gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-                    } else {
-                             gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-                     }
+            // Change sprite based on direction
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            {
+                // Horizontal movement
+                if (direction.x > 0)
+                {
+                    spriteRenderer.sprite = spriteRight; // Face right
+                }
+                else
+                {
+                    spriteRenderer.sprite = spriteLeft; // Face left
+                }
+            }
+            else
+            {
+                // Vertical movement
+                if (direction.y > 0)
+                {
+                    spriteRenderer.sprite = spriteUp; // Face up
+                }
+                else
+                {
+                    spriteRenderer.sprite = spriteDown; // Face down
+                }
+            }
 
-                     //Timer for shooting projectiles
-                     if (timeBtwShots <= 0) {
-                            isAttacking = true;
-                            //anim.SetTrigger("Attack");
-                            Instantiate (projectile, transform.position, Quaternion.identity);
-                            timeBtwShots = startTimeBtwShots;
-                     } else {
-                            timeBtwShots -= Time.deltaTime;
-                            isAttacking = false;
-                     }
-              }
-       }
+            // Timer for shooting projectiles
+            if (timeBtwShots <= 0)
+            {
+                isAttacking = true;
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                timeBtwShots = startTimeBtwShots;
+            }
+            else
+            {
+                timeBtwShots -= Time.deltaTime;
+                isAttacking = false;
+            }
+        }
+    }
 
-       void OnCollisionEnter2D(Collision2D collision){
-              //if (collision.gameObject.tag == "bullet") {
-              // EnemyLives -= 1;
-              // StopCoroutine("HitEnemy");
-              // StartCoroutine("HitEnemy");
-              //}
-              if (collision.gameObject.tag == "Player") {
-                     EnemyLives -= 2;
-                     StopCoroutine("HitEnemy");
-                     StartCoroutine("HitEnemy");
-              }
-       }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Web")
+        {
+            isWebbed = true;
+            Debug.Log("I am webbed!");
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        }
+    }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Web")
+        {
+            isWebbed = false;
+            Debug.Log("I am free from web");
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = startColor;
+        }
+    }
 
+    IEnumerator HitEnemy()
+    {
+        rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
+        if (EnemyLives < 1)
+        {
+            Destroy(gameObject);
+        }
+        else yield return new WaitForSeconds(0.5f);
+        rend.material.color = Color.white;
+    }
 
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "Web"){
-			isWebbed = true;
-			Debug.Log("I am webbed!");
-			gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-		if (other.gameObject.tag == "Web"){
-			isWebbed = false;
-			Debug.Log("I am free from web");
-			gameObject.GetComponentInChildren<SpriteRenderer>().color = startColor;
-		}
-	}
-
-       IEnumerator HitEnemy(){
-              // color values are R, G, B, and alpha, each divided by 100
-              rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
-              if (EnemyLives < 1){
-                     //gameControllerObj.AddScore (5);
-                     Destroy(gameObject);
-              }
-              else yield return new WaitForSeconds(0.5f);
-              rend.material.color = Color.white;
-       }
-
-      //DISPLAY the range of enemy's attack when selected in the Editor
-       void OnDrawGizmosSelected(){
-              Gizmos.DrawWireSphere(transform.position, attackRange);
-       }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
 }

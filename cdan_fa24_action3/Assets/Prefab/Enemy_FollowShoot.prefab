@@ -164,6 +164,10 @@ MonoBehaviour:
   attackRange: 6
   isAttacking: 0
   isWebbed: 0
+  spriteUp: {fileID: -758716254, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
+  spriteDown: {fileID: -1490668366, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
+  spriteLeft: {fileID: -387131848, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
+  spriteRight: {fileID: -828590951, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
 --- !u!1 &2708244559098156649
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 70
-  m_Sprite: {fileID: 21300000, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
+  m_Sprite: {fileID: -828590951, guid: 5b0af6bff00ffff4e8b74ebb53b6c84c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
