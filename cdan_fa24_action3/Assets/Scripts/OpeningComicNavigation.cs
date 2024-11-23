@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class OpeningComicNavigation : MonoBehaviour {
 //this script goes onto the MainCamera in a scene with a series of comic panels
 
-        public string nextScene = "Level1";
+        public string nextScene = "Talon_Work";
         public GameObject[] panels;
         private int panelsLength;
         public int currentPanel = 0;
