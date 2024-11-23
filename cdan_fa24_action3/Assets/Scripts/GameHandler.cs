@@ -93,7 +93,7 @@ public class GameHandler : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Sam_work");
+        SceneManager.LoadScene("Cutscene1");
     }
 
     // Return to MainMenu

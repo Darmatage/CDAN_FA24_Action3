@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: c7c367a5e8cce4122a2e6d3e28192869
+  - enabled: 1
+    path: Assets/Scenes/Cutscene1.unity
+    guid: 92f488c32d1ad448f964410dcddc21dd
+  - enabled: 1
+    path: Assets/Scenes/Talon_Work.unity
+    guid: 06e5e57fa6a985848b2396650acc7cce
   m_configObjects: {}
