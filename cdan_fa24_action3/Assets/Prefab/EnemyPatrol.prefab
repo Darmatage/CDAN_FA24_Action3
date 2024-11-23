@@ -143,7 +143,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4740825575780691280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,16 +156,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876e3a94496ae97418f3588041ef60b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.04
+  speed: 2
   startWaitTime: 0
   moveSpots:
   - {fileID: 1518725890571281145}
   - {fileID: 1135972769438423299}
   - {fileID: 6178617069897504266}
   - {fileID: 2141364937635100213}
+  - {fileID: 0}
   startSpot: 0
   moveForward: 1
   faceRight: 0
+  anim: {fileID: 0}
+  rb2D: {fileID: 0}
+  damage: 10
+  inRange: 0
+  EnemyLives: 3
+  attackRange: 3
+  isAttacking: 0
   isWebbed: 0
 --- !u!1 &5388605158817555616
 GameObject:

@@ -41,8 +41,6 @@ public class WebBridge_Effects : MonoBehaviour{
 		yield return new WaitForSeconds(.2f);
 		thePlayer.GetComponent<Collider2D>().enabled=true;
 		Debug.Log("player collider back on");
-		yield return new WaitForSeconds(.2f);
-		thePlayer.GetComponent<Collider2D>().enabled=true;
 	}
 
 
