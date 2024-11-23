@@ -10,13 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2973179338472867846}
   - component: {fileID: 6045613579521249642}
-  - component: {fileID: 1088486628554062613}
   - component: {fileID: 8620378093899634207}
   - component: {fileID: 6658090911741445650}
   - component: {fileID: 47670933184951775}
   - component: {fileID: 1648887406341372666}
   - component: {fileID: 5007115524236889555}
-  - component: {fileID: 7804516295705404903}
   - component: {fileID: 7344983059153824746}
   m_Layer: 0
   m_Name: Player
@@ -78,41 +76,6 @@ CircleCollider2D:
   m_Offset: {x: -0.02, y: 0.02}
   serializedVersion: 2
   m_Radius: 0.33
---- !u!58 &1088486628554062613
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235255882453887391}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: 0.02}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!50 &8620378093899634207
 Rigidbody2D:
   serializedVersion: 4
@@ -180,11 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a7876ad7ebac94c8686ad4f1c2dc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackPoint: {fileID: 0}
-  attackRange: 0.55
-  damageRange: 0.77
+  AttackPoint: {fileID: 95528864696488472, guid: 3a2e2168e0610644cb0214f29b1ec463, type: 3}
+  attackRange: 0.46
+  damageRange: 0.65
   damage: 10
-  timeToNextAttack: 2
+  timeToNextAttack: 1
   canAttack: 1
 --- !u!114 &5007115524236889555
 MonoBehaviour:
@@ -199,18 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pSpawn: {fileID: 0}
---- !u!114 &7804516295705404903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235255882453887391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87b2a2dafbfda54db0021cbe67cf8c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7344983059153824746
 MonoBehaviour:
   m_ObjectHideFlags: 0
