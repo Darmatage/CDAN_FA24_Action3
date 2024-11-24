@@ -13,14 +13,15 @@ TagManager:
   - WebCharger
   - Web
   - Bounding
+  - Pit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pit
   - Water
   - UI
-  - 
+  - Projectile
   - 
   - 
   - 

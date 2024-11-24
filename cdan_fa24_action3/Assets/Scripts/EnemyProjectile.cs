@@ -45,6 +45,7 @@ public class EnemyProjectile : MonoBehaviour {
                      Destroy (animEffect, 0.5f);
                      Destroy (gameObject);
               }
+
        }
 
        IEnumerator selfDestruct(){

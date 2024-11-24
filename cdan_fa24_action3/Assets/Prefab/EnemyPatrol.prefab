@@ -163,7 +163,6 @@ MonoBehaviour:
   - {fileID: 1135972769438423299}
   - {fileID: 6178617069897504266}
   - {fileID: 2141364937635100213}
-  - {fileID: 0}
   startSpot: 0
   moveForward: 1
   faceRight: 0
