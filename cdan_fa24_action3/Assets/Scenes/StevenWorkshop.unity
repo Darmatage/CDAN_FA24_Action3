@@ -74306,7 +74306,7 @@ PrefabInstance:
       objectReference: {fileID: 209094120}
     - target: {fileID: 1692044995208705040, guid: f209545093677ef428758012a99edf43, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2973179338472867846, guid: f209545093677ef428758012a99edf43, type: 3}
       propertyPath: m_RootOrder
@@ -74392,6 +74392,10 @@ PrefabInstance:
       propertyPath: m_LightVolumeIntensityEnabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896726326031796343, guid: f209545093677ef428758012a99edf43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5007115524236889555, guid: f209545093677ef428758012a99edf43, type: 3}
       propertyPath: pSpawn
       value: 
@@ -74424,6 +74428,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8796123962690872740, guid: f209545093677ef428758012a99edf43, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dd42746a60086e643b4d107a698c5901, type: 2}
     m_RemovedComponents:
     - {fileID: 7242177433974533450, guid: f209545093677ef428758012a99edf43, type: 3}
     - {fileID: 1088486628554062613, guid: f209545093677ef428758012a99edf43, type: 3}
@@ -74757,6 +74765,10 @@ PrefabInstance:
     - target: {fileID: 8191854691806480030, guid: c9e09b7fcade3ae4e8a49bbe71c48d0e, type: 3}
       propertyPath: m_Name
       value: GAMEHANDLER_CANVAS
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191854691806480030, guid: c9e09b7fcade3ae4e8a49bbe71c48d0e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
