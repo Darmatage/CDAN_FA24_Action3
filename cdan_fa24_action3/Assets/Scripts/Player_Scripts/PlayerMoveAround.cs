@@ -12,6 +12,10 @@ public class PlayerMoveAround : MonoBehaviour {
       public float startSpeed = 5f;
       public bool isAlive = true;
 
+		public bool walkUp = false;
+		public bool walkDown = false;
+		public bool walkSide = false;
+
       void Start(){
            anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
@@ -25,12 +29,51 @@ public class PlayerMoveAround : MonoBehaviour {
                   transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
 
                   if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0)){
-                  anim.SetBool ("Walk", true);
+					anim.SetBool ("Walk", true);
+
+					if ((Input.GetAxis("Vertical") < 0.1f) && 
+					((Input.GetAxis("Horizontal") >= 0.1f)||(Input.GetAxis("Horizontal") <= -0.1f))){
+						anim.SetBool ("WalkDown", false);
+						anim.SetBool ("WalkUp", false);
+						anim.SetBool ("WalkSide", true);
+
+						walkUp = false;
+						walkDown = false;
+						walkSide = true;
+					}
+
+					else if (Input.GetAxis("Vertical") < 0){
+						anim.SetBool ("WalkDown", true);
+						anim.SetBool ("WalkUp", false);
+						anim.SetBool ("WalkSide", false);
+
+						walkUp = false;
+						walkDown = true;
+						walkSide = false;
+					}
+					//else if (Input.GetAxis("Vertical") > 0){
+					else {
+						anim.SetBool ("WalkDown", false);
+						anim.SetBool ("WalkUp", true);
+						anim.SetBool ("WalkSide", false);
+
+						walkUp = true;
+						walkDown = false;
+						walkSide = false;
+					}
+					
+                  	
                       // if (!WalkSFX.isPlaying){
                             // WalkSFX.Play();
                       // }
                   } else {
-                   anim.SetBool ("Walk", false);
+                   	anim.SetBool ("Walk", false);
+					anim.SetBool ("WalkUp", false);
+					anim.SetBool ("WalkDown", false);
+					anim.SetBool ("WalkSide", false);
+						walkUp = false;
+						walkDown = false;
+						walkSide = false;
                       // WalkSFX.Stop();
                  }
 

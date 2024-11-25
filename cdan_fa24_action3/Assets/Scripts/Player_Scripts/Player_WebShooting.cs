@@ -21,8 +21,6 @@ public class WebShooting : MonoBehaviour{
 	private bool targetMoving = false;
 	public float targetSpeed = 6f;
 
-
-    // Start is called before the first frame update
     void Awake(){
 		//assign rigidbody2D and camera to variables for AIMING:
 		rb = GetComponent <Rigidbody2D>();
@@ -31,7 +29,6 @@ public class WebShooting : MonoBehaviour{
 		rechargeTimer = GameObject.FindWithTag("WebCharger").GetComponent<RechargeTimer>();
     }
 
-    // Update is called once per frame
     void Update(){
 		//mouse location for AIMING
 		mousePos = cam.ScreenToWorldPoint (Input.mousePosition);
@@ -61,8 +58,6 @@ public class WebShooting : MonoBehaviour{
 		//target movement:
 		if (targetMoving==true){
 			Vector2 maxPos = webShooter.position + ((webShooter.position - webShooterBase.position).normalized * maxDistance);
-			//Vector2 targetpos = Vector2.Lerp ((Vector2)webShooter.position, maxPos, targetSpeed * Time.fixedDeltaTime);
-            //webTarget.transform.position = new Vector3 (targetpos.x, targetpos.y, transform.position.z);
 			webTarget.transform.position = Vector2.MoveTowards ((Vector2)webTarget.transform.position, maxPos, targetSpeed * Time.fixedDeltaTime);
 		}
 

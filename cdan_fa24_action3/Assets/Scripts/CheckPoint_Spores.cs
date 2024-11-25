@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class CheckPoint_Spores : MonoBehaviour{
 
+	private GameHandler_Fungified gameHandlerFung;
 	public GameObject sporeVFX;
 	public GameObject normalMound;
 	public GameObject moundMushrooms1;
 	public GameObject moundMushrooms2;
 	public GameObject moundMushrooms3;
 
-	public bool isInfested = false;
+	public bool isFungified = false;
 
     // Start is called before the first frame update
     void Start(){
+		if (GameObject.FindWithTag("GameHandler")!=null){
+			gameHandlerFung = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_Fungified>();
+		}
 		normalMound.SetActive(true);
 		moundMushrooms1.SetActive(false);
 		moundMushrooms2.SetActive(false);
@@ -23,10 +27,12 @@ public class CheckPoint_Spores : MonoBehaviour{
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag=="Player"){
-			if (isInfested==false){
+			if (isFungified==false){
 				StartCoroutine(GrowShrooms(other.gameObject.transform.position));
+				gameHandlerFung.AddFungus();
 			}
-			isInfested = true;
+			isFungified = true;
+			
 		}
     }
 
