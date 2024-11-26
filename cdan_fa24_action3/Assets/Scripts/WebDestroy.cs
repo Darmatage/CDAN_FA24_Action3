@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WebDestroy : MonoBehaviour{
 
-
     public bool isWebbed = false;
 
     void OnTriggerEnter2D(Collider2D other){
@@ -14,5 +13,12 @@ public class WebDestroy : MonoBehaviour{
             Destroy(other.gameObject);
         }
     }
+
+	void OnTriggerExit2D(Collider2D other){
+        if (other.gameObject.tag == "Web"){
+            isWebbed = false;
+        }
+    }
+
 }
    
