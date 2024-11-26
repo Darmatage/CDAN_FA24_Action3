@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8253bb43d096145a68d21306c2d07ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: StevenWorkshop
+  nextScene: Level5
   panels:
   - {fileID: 623392350}
   - {fileID: 673812356}
