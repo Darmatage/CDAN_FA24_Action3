@@ -8,9 +8,9 @@ public class WebDestroy : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Web"){
-            Debug.Log("No web allowd here!");
+            Debug.Log("No web allowed here!");
             isWebbed = true;
-            Destroy(other.gameObject);
+            StartCoroutine(DestroyTheWebbing(other.gameObject));
         }
     }
 
@@ -19,6 +19,14 @@ public class WebDestroy : MonoBehaviour{
             isWebbed = false;
         }
     }
+
+	IEnumerator DestroyTheWebbing(GameObject web){
+		web.GetComponentInChildren<Animator>().SetBool("Destroy", true);
+		//web.GetComponent<WebBridge_Effects>().DissolveWeb();
+		yield return new WaitForSeconds(0.2f);  
+		Destroy(web);
+	}
+
 
 }
    

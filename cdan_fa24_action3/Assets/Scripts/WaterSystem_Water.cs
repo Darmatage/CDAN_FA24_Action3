@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterSystem_Water : MonoBehaviour{
-	//Animator anim;
+	Animator anim;
 	public float current = 5f;
+	public Collider2D colliderTrigger;
+	public Collider2D colliderCollision;
 
     void Start(){
-		//anim = gameObject.GetComponentInChildre<Animator>().
+		anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -24,5 +26,11 @@ public class WaterSystem_Water : MonoBehaviour{
 			other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
 		}
     }
+
+	public void TurnOffWater(){
+		anim.SetTrigger("WaterTurnOff");
+		colliderTrigger.enabled=false;
+		colliderCollision.enabled=false;
+	}
 
 }

@@ -17,7 +17,8 @@ public class WaterSystem_Pipe : MonoBehaviour{
 		if (other.gameObject.tag == "Web"){
 			pipeOpen.SetActive(false);
 			pipeClosed.SetActive(true);
-			water.SetActive(false);
+			//water.SetActive(false);
+			water.GetComponent<WaterSystem_Water>().TurnOffWater();
 			gameObject.GetComponent<Collider2D>().enabled=false;
 		}
     }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 47670933184951775}
   - component: {fileID: 5007115524236889555}
   - component: {fileID: 7344983059153824746}
+  - component: {fileID: 7299299205791564868}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,6 +120,9 @@ MonoBehaviour:
   FaceRight: 1
   startSpeed: 5
   isAlive: 1
+  walkUp: 0
+  walkDown: 0
+  walkSide: 0
 --- !u!114 &47670933184951775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +166,19 @@ MonoBehaviour:
   webTarget: {fileID: 1802454577323928111}
   maxDistance: 4
   targetSpeed: 6
+--- !u!114 &7299299205791564868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235255882453887391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0200e2ca9061e449af89ed6ed77ea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onWeb: 0
 --- !u!1 &1692044995208705040
 GameObject:
   m_ObjectHideFlags: 0

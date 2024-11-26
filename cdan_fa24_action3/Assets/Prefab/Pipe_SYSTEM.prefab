@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6680242217517328185}
   - component: {fileID: 6304776436630154837}
   m_Layer: 0
-  m_Name: WaterFlowing_0
+  m_Name: WaterFlowing_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944346815414599336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.05, z: 0}
+  m_LocalPosition: {x: 0, y: -3.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -574,8 +574,8 @@ GameObject:
   - component: {fileID: 2027478062215922007}
   - component: {fileID: 6917304935369309532}
   - component: {fileID: 5318490202868140698}
-  - component: {fileID: 3928120204196503425}
   - component: {fileID: 2121793684633535421}
+  - component: {fileID: 3928120204196503425}
   m_Layer: 0
   m_Name: Water_pivot
   m_TagString: Untagged
@@ -716,19 +716,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3928120204196503425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994241765993433352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1813a5e5442807243b226c4f22bfd99f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isWebbed: 0
 --- !u!114 &2121793684633535421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +729,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current: 5
+  colliderTrigger: {fileID: 6917304935369309532}
+  colliderCollision: {fileID: 2027478062215922007}
+--- !u!114 &3928120204196503425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994241765993433352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1813a5e5442807243b226c4f22bfd99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWebbed: 0
 --- !u!1 &8738323749498795189
 GameObject:
   m_ObjectHideFlags: 0

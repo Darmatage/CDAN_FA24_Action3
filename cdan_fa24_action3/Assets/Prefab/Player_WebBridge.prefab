@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 130251894582444589}
   - component: {fileID: 7190180186133174362}
   - component: {fileID: 7875530443309629640}
-  - component: {fileID: 7803581307903918999}
   m_Layer: 0
   m_Name: Player_WebBridge
   m_TagString: Web
@@ -181,19 +180,6 @@ MonoBehaviour:
   timeToDestroy: 5
   objectArt: {fileID: 4016458547241670813}
   fadeAway: 1
---- !u!114 &7803581307903918999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215757349548923308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0200e2ca9061e449af89ed6ed77ea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onWeb: 0
 --- !u!1 &1805479691610284333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6015207247570890558}
   - component: {fileID: 1046059294496126593}
+  - component: {fileID: 1933847783233149967}
   m_Layer: 0
   m_Name: webBridge_art
   m_TagString: Untagged
@@ -1361,3 +1348,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1933847783233149967
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016458547241670813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e1c13940ff6a8542aee4b6bc063fe80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

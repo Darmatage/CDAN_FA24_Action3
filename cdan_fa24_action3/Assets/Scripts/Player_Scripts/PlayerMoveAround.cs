@@ -51,8 +51,8 @@ public class PlayerMoveAround : MonoBehaviour {
 						walkDown = true;
 						walkSide = false;
 					}
-					//else if (Input.GetAxis("Vertical") > 0){
-					else {
+					else if (Input.GetAxis("Vertical") > 0){
+					//else {
 						anim.SetBool ("WalkDown", false);
 						anim.SetBool ("WalkUp", true);
 						anim.SetBool ("WalkSide", false);

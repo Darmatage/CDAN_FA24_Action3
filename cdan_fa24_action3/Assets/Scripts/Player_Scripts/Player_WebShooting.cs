@@ -36,8 +36,10 @@ public class WebShooting : MonoBehaviour{
 		//add a player Input listener for setting aim distance:
 		if (Input.GetButton("Fire1")){
 			//activate the webTarget: 
-			webTarget.SetActive(true);
-			targetMoving = true;
+			if (rechargeTimer.energyTimer >= rechargeTimer.energyUsedInWeb){
+				webTarget.SetActive(true);
+				targetMoving = true;
+			}
 		}
 
 		//add a player Input listener for SHOOTING:
