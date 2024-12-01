@@ -318,7 +318,7 @@ MonoBehaviour:
   m_text: OH FUGG!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc9552a09ec82415195f1cc449a14e0f, type: 2}
-  m_sharedMaterial: {fileID: 1018487751764849369, guid: bc9552a09ec82415195f1cc449a14e0f, type: 2}
+  m_sharedMaterial: {fileID: 3603127238318682749, guid: bc9552a09ec82415195f1cc449a14e0f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -538,14 +538,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3490566, g: 0.24532752, b: 0.24532752, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0accef00a016c4429b88df988a57268b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
