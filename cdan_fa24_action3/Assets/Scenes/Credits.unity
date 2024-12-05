@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 238.5}
-  m_SizeDelta: {x: 1260.5, y: 233.1}
+  m_AnchoredPosition: {x: 0, y: 250.961}
+  m_SizeDelta: {x: 1260.5, y: 208.177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117368516
 MonoBehaviour:
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290300596
+  m_fontColor: {r: 0.7057316, g: 0.7924528, b: 0.72141784, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 304
-  m_fontSizeBase: 304
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 840739998}
   - component: {fileID: 840739997}
   m_Layer: 5
-  m_Name: textTitle (1)
+  m_Name: textNames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,8 +464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 1096.3, y: 100}
+  m_AnchoredPosition: {x: 0, y: -38.41}
+  m_SizeDelta: {x: 1096.3, y: 400.473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840739997
 MonoBehaviour:
@@ -487,8 +487,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Created by Sam April, Steven Lam, Nate Bourget, Diego Hernandez & Talon
-    Danko
+  m_text: "Created by: Sam April, Steven Lam, \nNate Bourget, Diego Hernandez & Talon
+    Danko\n\nAUDIO: Team Wavyrn: \nMarc Wu\n\nWith help from our lovely professor,
+    Jason Wiser, \nfor Massart's CDAN-221-01: Game Design\n\nFONTS: Lithops and PicNic
+    from the Velvetyne Foundry"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -497,8 +499,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290300852
+  m_fontColor: {r: 0.7058824, g: 0.79607844, b: 0.72156864, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -515,8 +517,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.5
-  m_fontSizeBase: 25.5
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -582,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1107173922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -935,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -212.7
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -963,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6711769377945841321, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_Name
-      value: button_PLAY
+      value: button_MAINMENU
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1305,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1855886339
 RectTransform:
   m_ObjectHideFlags: 0

@@ -20,8 +20,8 @@ public class PlayerRespawn : MonoBehaviour {
                             gameObject.transform.position = pSpn2;
 
 							//temp content:  respawn with half health:
-							GameHandler.playerHealth = 50;
-							gameHandler.updateStatsDisplay();
+							//GameHandler.playerHealth = 50;
+							//gameHandler.updateStatsDisplay();
                      }
               }
        }
