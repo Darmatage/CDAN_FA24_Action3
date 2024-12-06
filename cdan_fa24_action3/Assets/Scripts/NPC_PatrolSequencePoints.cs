@@ -33,8 +33,9 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
 
 	public bool isWebbed = false;
        
+	 float knockBackForce = 6f; 
 
-       void Start(){
+	void Start(){
               waitTime = startWaitTime;
               nextSpot = startSpot;
               //anim = gameObject.GetComponentInChildren<Animator>();
@@ -126,6 +127,16 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
                     isAttacking = true;
                     //anim.SetBool("Attack", true);
                     gameHandler.playerGetHit(damage);
+
+					 //Tell the player to STOP getting knocked back before getting knocked back:
+					other.gameObject.GetComponent<Player_EndKnockBack>().EndKnockBack();
+					StartCoroutine(EndKnockBack());
+                     //Add force to the player, pushing them back without teleporting:
+                    Rigidbody2D pushRB = other.gameObject.GetComponent<Rigidbody2D>();
+                    Vector2 moveDirectionPush = rb2D.transform.position - other.transform.position;
+                    pushRB.AddForce(moveDirectionPush.normalized * knockBackForce * - 1f, ForceMode2D.Impulse);
+					//push myself:
+					rb2D.AddForce(moveDirectionPush.normalized * knockBackForce/2, ForceMode2D.Impulse);
                 }
         }
 
@@ -139,6 +150,11 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
         //DISPLAY the range of enemy's attack when selected in the Editor
         void OnDrawGizmosSelected(){
                 Gizmos.DrawWireSphere(transform.position, attackRange);
+       }
+
+	   IEnumerator EndKnockBack(){
+              yield return new WaitForSeconds(0.2f);
+              rb2D.velocity= new Vector3(0,0,0);
        }
 
 }

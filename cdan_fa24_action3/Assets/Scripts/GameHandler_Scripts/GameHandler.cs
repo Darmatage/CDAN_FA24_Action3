@@ -46,6 +46,12 @@ public class GameHandler : MonoBehaviour
         if (isDefending == false)
         {
             playerHealth -= damage;
+
+			//only screenshake when hurt, not when getting health poserup:
+			if (damage > 0){
+				GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>().ShakeCamera(0.15f, 0.3f);
+			}
+
             if (playerHealth >= 0)
             {
                 updateStatsDisplay();
