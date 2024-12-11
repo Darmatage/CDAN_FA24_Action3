@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2209987087155872671}
   - component: {fileID: 7389274785774158836}
   m_Layer: 0
-  m_Name: message_pressE
+  m_Name: MessageNear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5443197852467427057}
   - component: {fileID: 8262861969544072725}
+  - component: {fileID: 5555296925857611634}
   m_Layer: 0
   m_Name: NPC_Chat
   m_TagString: Untagged
@@ -218,7 +219,7 @@ Transform:
   - {fileID: 2209987087155872671}
   - {fileID: 667396888889699379}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8262861969544072725
 BoxCollider2D:
@@ -265,6 +266,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5555296925857611634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778902599776822859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c25729915cca54ab5371227bdf0f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatOn: {fileID: 723055687131072509}
 --- !u!1 &886566422060366352
 GameObject:
   m_ObjectHideFlags: 0
