@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMoveAround : MonoBehaviour {
 
       public Animator anim;
-      //public AudioSource WalkSFX;
+      public AudioSource WalkSFX;
       public Rigidbody2D rb2D;
       public bool FaceRight = false; // determine which way player is facing. Leave public for other scripts to access.
       public static float runSpeed = 5f;
@@ -63,9 +63,10 @@ public class PlayerMoveAround : MonoBehaviour {
 					}
 					
                   	
-                      // if (!WalkSFX.isPlaying){
-                            // WalkSFX.Play();
-                      // }
+                        if (!WalkSFX.isPlaying){
+                             WalkSFX.Play();
+                        }
+
                   } else {
                    	anim.SetBool ("Walk", false);
 					anim.SetBool ("WalkUp", false);
@@ -74,7 +75,7 @@ public class PlayerMoveAround : MonoBehaviour {
 						walkUp = false;
 						walkDown = false;
 						walkSide = false;
-                      // WalkSFX.Stop();
+                        WalkSFX.Stop();
                  }
 
                   // Turning. Reverse if input is moving the Player right and Player faces left.
