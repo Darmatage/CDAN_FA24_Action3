@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 1661113152298359660}
   - component: {fileID: 1338180410217579880}
   - component: {fileID: 1376393824959841032}
+  - component: {fileID: 1778971636469188638}
   m_Layer: 0
   m_Name: NPC_art
   m_TagString: Untagged
@@ -376,11 +377,31 @@ Animation:
   m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: af2d81f40e8e1264cad60b787649f22f, type: 2}
-  - {fileID: 7400000, guid: 587f3c68200b4314b88870e8f593ab6d, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &1778971636469188638
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886566422060366352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4990068454725861283
 GameObject:
   m_ObjectHideFlags: 0
