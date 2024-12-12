@@ -6,8 +6,9 @@ public class DestroyTimed : MonoBehaviour{
 	public float timeToDestroy;
 	public GameObject objectArt;
 	public bool fadeAway = true;
-
+	public AudioSource WebSound;
     void Start(){
+    	WebSound.Play();
 		StartCoroutine(DestroyMeTime(timeToDestroy));
     }
 

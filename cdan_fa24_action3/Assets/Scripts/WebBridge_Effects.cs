@@ -6,13 +6,12 @@ public class WebBridge_Effects : MonoBehaviour{
 	
 	public bool onWeb = false;
 
-/*
-private Animator anim;
+
 
 	void Start(){
-		anim = gameObject.GetComponentInChildren<Animator>();
+		 
 	}
-*/
+
 
 	public void OnTriggerStay2D(Collider2D other){
         if (other.gameObject.tag=="Web"){

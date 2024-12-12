@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WebDestroy : MonoBehaviour{
-
+    
     public bool isWebbed = false;
+
+    void Start(){
+         
+    }
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Web"){
