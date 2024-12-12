@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -359.99997
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3490566, g: 0.24532752, b: 0.24532752, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -845,6 +845,82 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6711769377945841321, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
   m_PrefabInstance: {fileID: 1827216866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1236025075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236025076}
+  - component: {fileID: 1236025078}
+  - component: {fileID: 1236025077}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1236025076
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236025075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1570209126}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -375.86, y: 145}
+  m_SizeDelta: {x: 388.28, y: 388.2798}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1236025077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236025075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e73448fe2f3543e479e91a0170d43077, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1236025078
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236025075}
+  m_CullTransparentMesh: 1
 --- !u!1 &1279084699
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0572, y: 54}
+  m_AnchoredPosition: {x: -258, y: -202}
   m_SizeDelta: {x: 1232.1, y: 38.8387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279084701
@@ -903,8 +979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The world has been enveloped in darkness and evil creatures... Help light
-    up the planet!
+  m_text: The world is too dark, lets brighten it up and make it ours.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -967,7 +1042,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 700.86743, y: 99.85786, z: -251.72446, w: -105.659615}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1071,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -360
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1473,6 +1548,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 718165084}
+  - {fileID: 1236025076}
   - {fileID: 117368515}
   - {fileID: 1279084700}
   - {fileID: 1365557654}
@@ -1715,7 +1791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -359.99997
       objectReference: {fileID: 0}
     - target: {fileID: 3124660483723839392, guid: 96110658da88c43e39e51a12d0f044b7, type: 3}
       propertyPath: m_AnchoredPosition.y
