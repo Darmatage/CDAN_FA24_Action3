@@ -30,7 +30,7 @@ private Animator anim;
     }
 
 	IEnumerator OffWeb(){
-		yield return new WaitForSeconds(.2f);
+		yield return new WaitForSeconds(.1f);
 		gameObject.GetComponent<Collider2D>().enabled=true;
 		Debug.Log("player collider back on");
 	}
